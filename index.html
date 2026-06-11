@@ -2,99 +2,164 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PVO HUB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PVO HUB — Рейтинг ПВО</title>
 
 <style>
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f5f7fa;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
 }
 
 header{
-background:#0B1F3A;
-color:white;
-padding:20px 40px;
+    background:#0B1F3A;
+    color:white;
+    padding:20px;
 }
 
 header h1{
-margin:0;
+    margin:0;
 }
 
-nav{
-margin-top:10px;
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-right:20px;
+.search{
+    width:100%;
+    padding:12px;
+    font-size:16px;
+    margin-bottom:20px;
 }
 
-.hero{
-padding:100px 20px;
-text-align:center;
+.card{
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
-.hero h2{
-font-size:48px;
-color:#0B1F3A;
+.rating{
+    display:inline-block;
+    background:#0B1F3A;
+    color:white;
+    padding:5px 12px;
+    border-radius:6px;
+    font-weight:bold;
 }
 
-.hero p{
-font-size:20px;
-max-width:700px;
-margin:auto;
-}
-
-.button{
-display:inline-block;
-margin-top:25px;
-padding:15px 30px;
-background:#1E88E5;
-color:white;
-text-decoration:none;
-border-radius:8px;
+.outlook{
+    display:inline-block;
+    margin-left:10px;
+    color:green;
+    font-weight:bold;
 }
 
 footer{
-background:#0B1F3A;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:100px;
+    margin-top:50px;
+    background:#0B1F3A;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
 <h1>PVO HUB</h1>
-
-<nav>
-<a href="#">Главная</a>
-<a href="#">Новости</a>
-<a href="#">Документы</a>
-<a href="#">Контакты</a>
-</nav>
+<p>Независимый рейтинг представителей владельцев облигаций</p>
 </header>
 
-<section class="hero">
-<h2>Представитель владельцев облигаций</h2>
+<div class="container">
+
+<h2>Каталог ПВО</h2>
+
+<input
+class="search"
+type="text"
+id="search"
+placeholder="Поиск ПВО..."
+onkeyup="filterCards()"
+>
+
+<div class="card">
+<h3>Первая Независимая</h3>
+
+<span class="rating">AA+</span>
+
+<span class="outlook">
+Позитивный
+</span>
 
 <p>
-Информационная платформа для раскрытия информации,
-публикации документов и взаимодействия с инвесторами.
+Опытный представитель владельцев облигаций.
 </p>
+</div>
 
-<a class="button" href="#">Подробнее</a>
-</section>
+<div class="card">
+<h3>Регион Финанс</h3>
+
+<span class="rating">A+</span>
+
+<span class="outlook">
+Стабильный
+</span>
+
+<p>
+Крупный участник долгового рынка.
+</p>
+</div>
+
+<div class="card">
+<h3>АБО ПВО</h3>
+
+<span class="rating">BBB+</span>
+
+<span class="outlook">
+Позитивный
+</span>
+
+<p>
+Активно развивается.
+</p>
+</div>
+
+</div>
 
 <footer>
 © PVO HUB
 </footer>
+
+<script>
+function filterCards() {
+
+let input =
+document.getElementById("search")
+.value
+.toLowerCase();
+
+let cards =
+document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+let text =
+card.innerText.toLowerCase();
+
+card.style.display =
+text.includes(input)
+? "block"
+: "none";
+
+});
+}
+</script>
 
 </body>
 </html>
