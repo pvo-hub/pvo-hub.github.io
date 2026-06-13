@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Лигал Кэпитал Инвестор Сервисез</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+max-width:1000px;
+margin:auto;
+padding:20px;
+background:#f5f7fa;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.rating{
+display:inline-block;
+background:#0B1F3A;
+color:white;
+padding:8px 15px;
+border-radius:8px;
+font-weight:bold;
+}
+
+img{
+width:120px;
+margin-bottom:20px;
+}
+
+.back{
+display:inline-block;
+margin-top:20px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+<img src="https://via.placeholder.com/120?text=LOGO">
+
+<h1>Лигал Кэпитал Инвестор Сервисез</h1>
+
+<p>
+<span class="rating">AA-</span>
+Стабильный прогноз
+</p>
+
+<h3>Описание</h3>
+
+<p>
+Представитель владельцев облигаций.
+</p>
+
+<h3>Сайт</h3>
+
+<p>
+Добавить позже
+</p>
+
+<h3>Комментарии</h3>
+
+<p>
+Добавить позже
+</p>
+
+<a class="back" href="index.html">
+← Вернуться в каталог
+</a>
+
+</div>
+
+</body>
+</html>
